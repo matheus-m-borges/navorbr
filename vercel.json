@@ -1,1 +1,1 @@
-{`n  "cleanUrls": true,`n  "trailingSlash": false,`n  "rewrites": [`n    {`n      "source": "/solucoes/:path*",`n      "destination": "/index.html"`n    },`n    {`n      "source": "/(.*)",`n      "destination": "/index.html"`n    }`n  ]`n}
+{`n  "cleanUrls": true,`n  "trailingSlash": false`n}
