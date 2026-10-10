@@ -1,0 +1,1 @@
+import { defineConfig } from "@tanstack/start/config";`nimport { nitro } from "nitro/vite";`n`nexport default defineConfig({`n  server: {`n    preset: "vercel",`n  },`n  vite: {`n    plugins: [`n      nitro({`n        preset: "vercel",`n      }),`n    ],`n  },`n});`n
