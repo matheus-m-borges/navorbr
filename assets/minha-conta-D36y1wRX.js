@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-NZYk81nU.js";import{E as t}from"./index-B15MGqx-.js";import{t as n}from"./MinhaContaSection-BQxPi1Hl.js";var r=e();function i(){return(0,r.jsx)(t,{title:`Minha Conta`,subtitle:`Dados cadastrais, segurança, sessões e consentimentos LGPD`,children:(0,r.jsx)(n,{})})}export{i as component};

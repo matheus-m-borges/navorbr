@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-hePW80VL.js";import{n as t,t as n}from"./createServerFn-WxhPnVOA.js";import{t as r}from"./auth-middleware-JDjVgB0Q.js";var i=e({writeAuditLog:()=>a}),a=n({method:`POST`}).middleware([r]).handler(t(`41b87ca0e672e652f1b30569f130f79e7668e89e20570d949d8389dcd7bc6818`));export{a as n,i as t};
