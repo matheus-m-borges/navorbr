@@ -1,0 +1,6 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>NavorBR</title>
+  <path d="M35 183V81C35 67.745 45.745 57 59 57C67.641 57 75.646 61.645 80.925 69.144L127.5 135.321" stroke="#2457F5" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128.5 135.321L175.075 69.144C180.354 61.645 188.359 57 197 57C210.255 57 221 67.745 221 81V183" stroke="#2457F5" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="128" cy="135" r="25" fill="#00B88A" stroke="#10233F" stroke-width="8"/>
+</svg>

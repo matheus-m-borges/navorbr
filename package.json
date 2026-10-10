@@ -1,9 +1,0 @@
-{
-  "name": "navorbr",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Site Institucional NAVOR Sistemas (navorbr.com)",
-  "scripts": {
-    "dev": "npx serve ."
-  }
-}
