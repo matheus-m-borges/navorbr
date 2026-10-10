@@ -4,7 +4,6 @@
   "private": true,
   "description": "Site Institucional NAVOR Sistemas (navorbr.com)",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Site estatico otimizado pronto para deploy'"
+    "dev": "npx serve ."
   }
 }
