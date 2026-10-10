@@ -1,1 +1,4 @@
-{`n  "cleanUrls": true,`n  "trailingSlash": false`n}
+{
+  "cleanUrls": true,
+  "trailingSlash": false
+}
