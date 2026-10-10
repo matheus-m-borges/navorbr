@@ -1,6 +1,1 @@
-{
-  "framework": "tanstack-start",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "outputDirectory": ".vercel/output/static"
-}
+{`n  "$schema": "https://openapi.vercel.sh/vercel.json",`n  "framework": "tanstack-start",`n  "buildCommand": "npm run build",`n  "installCommand": "npm install"`n}
