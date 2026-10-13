@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+<symbol id="scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="m8.2 8.2 12 12M8.2 15.8 20 4M14 10l-3 3"/></symbol>
+<symbol id="scales" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M3 7l9-3 9 3M5 7 2 14h6L5 7Zm14 0-3 7h6l-3-7ZM2 14q3 4 6 0m8 0q3 4 6 0"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 17v-5h3v5m4 0V8h3v9m3-13-5 3-5-2-3 3"/></symbol>
+<symbol id="helmet" viewBox="0 0 24 24"><path d="M3 17v-3a9 9 0 0 1 6-8m6 0a9 9 0 0 1 6 8v3M9 13V4h6v9M2 17h20v4H2Z"/></symbol>
+<symbol id="paw" viewBox="0 0 24 24"><ellipse cx="5" cy="9" rx="2.5" ry="3" transform="rotate(-25 5 9)"/><ellipse cx="10" cy="5" rx="2" ry="3"/><ellipse cx="16" cy="5" rx="2" ry="3"/><ellipse cx="21" cy="10" rx="2" ry="3" transform="rotate(25 21 10)"/><path d="M7 15c-5 5 0 8 3 6 2-1 3-1 5 0 4 2 7-2 3-6l-3-3c-2-2-4-2-6 0Z"/></symbol>
+<symbol id="letter" viewBox="0 0 24 24"><path d="M4 21 10 3h4l6 18h-4l-1.5-5h-5L8 21Zm7-9h2l-1-4Z"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5ZM20 2v4m-2-2h4"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6Zm-4 9 3 3 5-5"/></symbol>
+<symbol id="growth" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-10m-7 0h7v7M3 22h18"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+<symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+</svg>

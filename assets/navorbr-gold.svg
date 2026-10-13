@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="66" viewBox="0 0 330 66" fill="none">
+  <title>NavorBR</title>
+  <defs>
+    <linearGradient id="gold" x1="20" y1="1" x2="54" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#FFE3A3"/><stop offset=".45" stop-color="#EFC375"/><stop offset=".78" stop-color="#BE8734"/><stop offset="1" stop-color="#F7D68D"/></linearGradient>
+    <linearGradient id="white" x2="0" y2="1"><stop stop-color="#FFF"/><stop offset="1" stop-color="#DCDAD6"/></linearGradient>
+  </defs>
+  <path d="M3 7 18 24V62L3 51Z" fill="url(#gold)"/>
+  <path d="M3 5H24Q30 5 34 10L73 61H53Q46 61 42 55Z" fill="url(#gold)"/>
+  <path d="M57 5 73 18V56L57 35Z" fill="url(#gold)"/>
+  <text x="86" y="49" font-family="Manrope,Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="-2" fill="url(#white)">Navor<tspan fill="url(#gold)">BR</tspan></text>
+</svg>

@@ -1,186 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NAVOR BR | Tecnologia para Evoluir</title>
-  <meta name="description" content="Ecossistema de soluções inteligentes para simplificar operações, conectar equipes e impulsionar negócios." />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <style>
-    :root {
-      --bg: #050507;
-      --text: #ffffff;
-      --muted: #a1a1aa;
-      --gold: #d4af37;
-      --border: rgba(255, 255, 255, 0.08);
-      --surface: #13141b;
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-sans: 'DM Sans', sans-serif;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    
-    /* Header */
-    header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      height: 80px; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 24px; background: rgba(5, 5, 7, 0.8); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .logo img { height: 32px; filter: brightness(0) invert(1); }
-    nav { display: flex; gap: 32px; }
-    nav a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s; }
-    nav a:hover { color: var(--text); }
-    @media (max-width: 768px) { nav { display: none; } }
-
-    /* Hero */
-    .hero {
-      min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
-      padding-top: 80px; text-align: center;
-    }
-    .eyebrow {
-      display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--font-display); font-size: clamp(40px, 6vw, 72px);
-      font-weight: 500; line-height: 1.1; margin-bottom: 24px;
-      background: linear-gradient(135deg, #fff 30%, #a1a1aa 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      font-size: clamp(16px, 2vw, 20px); color: var(--muted);
-      max-width: 600px; margin: 0 auto 40px;
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; background: var(--gold); color: #000;
-      font-weight: 600; text-decoration: none; border-radius: 999px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
-
-    /* Products Grid */
-    .products { padding: 120px 0; border-top: 1px solid var(--border); }
-    .section-header { text-align: center; margin-bottom: 64px; }
-    .section-header h2 {
-      font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px);
-      margin-bottom: 16px;
-    }
-    .grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-    .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 16px; padding: 32px; text-decoration: none; color: inherit;
-      transition: all 0.3s ease; display: flex; flex-direction: column; gap: 16px;
-    }
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.2); transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-    .card-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: rgba(212, 175, 55, 0.1); color: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-weight: 700; font-size: 20px;
-    }
-    .card h3 { font-family: var(--font-display); font-size: 20px; }
-    .card p { font-size: 14px; color: var(--muted); flex-grow: 1; }
-    .card-link {
-      font-size: 12px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.05em; color: var(--gold); margin-top: auto;
-    }
-
-    /* Footer */
-    footer {
-      padding: 60px 0; border-top: 1px solid var(--border);
-      text-align: center; color: var(--muted); font-size: 13px;
-    }
-  </style>
-
-    <script>if(window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);</script></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080A0D">
+  <title>NavorBR — Tecnologia que impulsiona resultados</title>
+  <meta name="description" content="Sistemas modernos e especializados para simplificar a gestão e impulsionar o crescimento do seu negócio. Conheça o BarberHub e o ecossistema NavorBR.">
+  <link rel="canonical" href="https://navorbr.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="NavorBR — Tecnologia que impulsiona resultados">
+  <meta property="og:description" content="Soluções SaaS especializadas para o seu negócio. Conheça o BarberHub e nosso ecossistema.">
+  <meta property="og:url" content="https://navorbr.com/">
+  <meta property="og:image" content="https://navorbr.com/assets/globe.webp">
+  <link rel="icon" href="/assets/navorbr-gold-icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/main.js" defer></script>
+</head>
 <body>
-  <header>
-    <a href="/" class="logo"><img src="/navorbr-logo-light.svg" alt="NAVOR BR" /></a>
-    <nav>
-      <a href="#empresa">Empresa</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#contato">Contato</a>
-      <a href="https://sis.navorbr.com" target="_blank">Acesso Core</a>
-        <a href="https://barberhub.navorbr.com" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 500;">BarberHub</a>
-    </nav>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="NavorBR — início"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="330" height="66"></a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="/" aria-current="location">Início</a><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <div class="header-core"><a class="button button-outline" href="https://sis.navorbr.com" aria-label="Acessar sistema NAVOR Core — administração">Acessar sistema <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"/></svg></a><span>NAVOR Core · Administração</span></div>
+        <a class="button button-primary" href="mailto:contato@navorbr.com">Fale conosco</a>
+      </div>
+      <nav class="no-js-nav" aria-label="Navegação sem JavaScript"><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a></nav>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </header>
-
-  <main>
-    <section class="hero container">
-      <span class="eyebrow">NAVOR SISTEMAS</span>
-      <h1>O futuro da gestão<br/>começa <span style="color:var(--gold)">aqui.</span></h1>
-      <p>Um ecossistema de soluções inteligentes para simplificar operações, conectar equipes e impulsionar negócios.</p>
-      <div>
-        <a href="#solucoes" class="btn">Explorar soluções</a>
+  <dialog class="mobile-menu" id="mobile-menu" aria-label="Menu de navegação">
+    <div class="menu-top"><a class="brand" href="/" aria-label="NavorBR — início"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="330" height="66"></a><button class="menu-close" aria-label="Fechar menu" autofocus>×</button></div>
+    <nav aria-label="Navegação mobile"><a href="/">Início</a><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a></nav>
+    <div class="mobile-access"><a class="button button-primary" href="https://barberhub.navorbr.com">Conhecer BarberHub <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><a class="button button-outline" href="https://barberhub.navorbr.com/entrar">Entrar no BarberHub</a><small>Área administrativa da NavorBR</small><a href="https://sis.navorbr.com">Acessar NAVOR Core ↗</a></div>
+    <a class="menu-email" href="mailto:contato@navorbr.com">contato@navorbr.com</a>
+  </dialog>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="hero-title" data-section>
+      <div class="hero-background" aria-hidden="true">
+        <picture class="globe-fallback"><source media="(max-width:900px)" srcset="/assets/globe-reference-mobile.webp"><img src="/assets/globe-reference.webp" alt="" width="1536" height="1024" fetchpriority="high"></picture>
+        <div class="globe-visual"><canvas class="globe-canvas" aria-hidden="true"></canvas></div>
       </div>
-      <div style="margin-top: 64px; font-size: 11px; letter-spacing: 0.2em; color: #555;">TECNOLOGIA PARA EVOLUIR</div>
-    </section>
-
-    <section id="solucoes" class="products container">
-      <div class="section-header">
-        <span class="eyebrow">NOSSO ECOSSISTEMA</span>
-        <h2>Seis soluções especializadas.<br/>Uma visão integrada.</h2>
-        <p style="color: var(--muted); max-width: 500px; margin: 0 auto;">Cada produto foi desenhado para resolver desafios reais de um segmento específico.</p>
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dash" aria-hidden="true"></span>Soluções SaaS para o seu negócio</p>
+          <h1 id="hero-title"><span class="title-line"><span>Tecnologia que</span></span><span class="title-line"><span>impulsiona</span></span><span class="title-line"><em>resultados.</em></span></h1>
+          <p class="hero-description">Sistemas modernos e especializados para simplificar a gestão e impulsionar o crescimento do seu negócio.</p>
+          <div class="hero-buttons"><a class="button button-primary" href="#sistemas">Conheça nossas soluções <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><a class="button button-outline" href="#empresa">Sobre a NAVOR BR</a></div>
+        </div>
       </div>
-      <div class="grid">
-        <a href="#" class="card"><div class="card-icon">R</div><h3>RepHub</h3><p>Gestão inteligente para representantes comerciais.</p><span class="card-link">Conhecer solução ↗</span></a>
-        <a href="#" class="card"><div class="card-icon">L</div><h3>LawHub</h3><p>Gestão completa para escritórios de advocacia.</p><span class="card-link">Conhecer solução ↗</span></a>
-        <a href="https://barberhub.navorbr.com" target="_blank" rel="noopener noreferrer" class="card"><div class="card-icon">B</div><h3>BarberHub</h3><p>Gestão profissional para barbearias.</p><span class="card-link">Conhecer solução ↗</span></a>
-        <a href="#" class="card"><div class="card-icon">E</div><h3>EngHub</h3><p>Tecnologia para gestão de obras e engenharia.</p><span class="card-link">Conhecer solução ↗</span></a>
-        <a href="#" class="card"><div class="card-icon">P</div><h3>PetHub</h3><p>Gestão integrada para negócios do setor pet.</p><span class="card-link">Conhecer solução ↗</span></a>
-        <a href="#" class="card"><div class="card-icon">3D</div><h3>LetterHub</h3><p>Tecnologia para letras caixa e comunicação visual.</p><span class="card-link">Conhecer solução ↗</span></a>
+      <div class="wrap hero-caption"><a class="scroll-cue" href="#sistemas"><span class="scroll-track" aria-hidden="true"></span>Explore o ecossistema <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><button class="globe-toggle" type="button" aria-pressed="false" hidden>Pausar movimento</button></div>
+    </section>
+    <section class="systems wrap" id="sistemas" aria-labelledby="systems-title" tabindex="-1" data-section>
+      <div class="section-heading" data-reveal><div><p class="eyebrow">Nossos sistemas</p><h2 id="systems-title">Soluções completas<br>para <span>cada segmento.</span></h2></div><p class="section-intro">Cada negócio tem seus desafios.<br>Nossas soluções são pensadas para simplificar o que importa no seu dia a dia.</p></div>
+      <div class="product-grid">
+        <article class="solution-card featured interactive-card" data-reveal style="--delay:0ms"><img src="/assets/barberhub.webp" alt="Barbeiro fazendo a barba de um cliente" width="480" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">01 /</span><span class="active-badge">Disponível</span><div class="solution-content"><h3>BarberHub</h3><p>Gestão profissional<br>para barbearias.</p><div class="mini-links"><a href="https://barberhub.navorbr.com" aria-label="Conhecer BarberHub">Conhecer <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><a href="https://barberhub.navorbr.com/entrar" aria-label="Entrar no BarberHub">Entrar</a></div></div></article>
+        <article class="solution-card interactive-card" data-reveal style="--delay:80ms"><img src="/assets/lawhub.webp" alt="Estátua da Justiça com espada e balança" width="480" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">02 /</span><div class="solution-content"><h3>LawHub</h3><p>Organização para<br>a sua prática jurídica.</p><span class="status">Em breve</span></div></article>
+        <article class="solution-card interactive-card" data-reveal style="--delay:160ms"><img src="/assets/rephub.webp" alt="Coleções expostas em um showroom comercial" width="480" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">03 /</span><div class="solution-content"><h3>RepHub</h3><p>CRM para representantes<br>comerciais.</p><span class="status">Em breve</span></div></article>
+        <article class="solution-card interactive-card" data-reveal style="--delay:240ms"><img src="/assets/enghub.webp" alt="Profissionais em uma obra de engenharia" width="480" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">04 /</span><div class="solution-content"><h3>EngHub</h3><p>Mais gestão para<br>obras e engenharia.</p><span class="status">Em breve</span></div></article>
+        <article class="solution-card interactive-card" data-reveal style="--delay:320ms"><img src="/assets/pethub.webp" alt="Cachorro em um ambiente ao ar livre" width="480" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">05 /</span><div class="solution-content"><h3>PetHub</h3><p>Gestão para quem<br>cuida dos pets.</p><span class="status">Em breve</span></div></article>
+        <article class="solution-card interactive-card" data-reveal style="--delay:400ms"><img src="/assets/letterhub.webp" alt="Letra caixa A em metal com iluminação dourada" width="640" height="640" loading="lazy" decoding="async"><span class="product-number" aria-hidden="true">06 /</span><div class="solution-content"><h3>LetterHub</h3><p>Letras caixa e<br>produção 3D.</p><span class="status">Em breve</span></div></article>
+      </div>
+      <p class="systems-footnote"><i aria-hidden="true"></i>BarberHub disponível. Novas soluções em desenvolvimento.</p>
+    </section>
+    <section class="company" id="empresa" aria-labelledby="company-title" tabindex="-1" data-section>
+      <div class="wrap company-layout">
+        <div class="company-copy"><p class="eyebrow">Uma visão. Inúmeras possibilidades.</p><h2 class="section-title" id="company-title" data-reveal>Mais que sistemas,<br>parceiros do seu<br><span class="gold">crescimento.</span></h2><div class="gold-line" aria-hidden="true" data-reveal></div><p data-reveal style="--delay:100ms">A NAVOR BR desenvolve soluções SaaS para diferentes segmentos. Unimos especialização e tecnologia para tornar a gestão mais simples e acompanhar a evolução do seu negócio.</p></div>
+        <div><div class="values">
+          <div class="value" data-reveal><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#layers"/></svg><h3>Especialização<br>que faz a diferença</h3><p>Sistemas pensados para as necessidades de cada segmento.</p></div>
+          <div class="value" data-reveal style="--delay:80ms"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#shield"/></svg><h3>Tecnologia<br>com responsabilidade</h3><p>Segurança e facilidade de uso orientam o que construímos.</p></div>
+          <div class="value" data-reveal style="--delay:160ms"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#growth"/></svg><h3>Evolução<br>contínua</h3><p>Soluções que evoluem junto com os desafios do seu negócio.</p></div>
+        </div><div class="company-bottom"><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Gestão mais simples</span><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Foco no seu negócio</span></div></div>
       </div>
     </section>
-
-    <section id="empresa" class="container" style="padding: 120px 0; text-align: center; border-top: 1px solid var(--border);">
-      <span class="eyebrow">QUEM SOMOS</span>
-      <h2 style="font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); margin-bottom: 24px;">Tecnologia criada para transformar<br/>a maneira como empresas trabalham.</h2>
-      <p style="color: var(--muted); max-width: 700px; margin: 0 auto; font-size: 18px;">A NAVOR Sistemas desenvolve soluções digitais para organizar operações, automatizar processos e impulsionar negócios em diferentes segmentos.</p>
-    </section>
-
-    <section id="contato" class="container" style="padding: 120px 0; text-align: center; border-top: 1px solid var(--border);">
-      <span class="eyebrow">VAMOS CONVERSAR</span>
-      <h2 style="font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); margin-bottom: 24px;">Seu próximo movimento começa aqui.</h2>
-      <p style="color: var(--muted); max-width: 500px; margin: 0 auto 40px; font-size: 18px;">Conte o que sua operação precisa. Vamos encontrar o próximo passo juntos.</p>
-      <a href="mailto:contato@navorbr.com" class="btn">Fale com a NAVOR</a>
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="cta-image" aria-hidden="true"><picture><source media="(max-width:600px)" srcset="/assets/office-mobile.webp"><img src="/assets/office.webp" alt="" width="1600" height="1068" loading="lazy" decoding="async"></picture></div>
+      <div class="wrap cta-layout"><div data-reveal><p class="eyebrow">Seu próximo passo começa aqui</p><h2 id="cta-title">Pronto para levar seu negócio ao <span class="gold">próximo nível?</span></h2></div><div class="cta-copy" data-reveal><p>Conheça nossas soluções e descubra como a tecnologia pode transformar sua gestão.</p><a class="button button-primary" href="https://barberhub.navorbr.com">Conhecer BarberHub <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a></div></div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 NAVOR Sistemas. Todos os direitos reservados.</p>
+  <footer class="site-footer" id="contato" tabindex="-1" data-section>
+    <div class="wrap footer-grid">
+      <div class="footer-brand" data-reveal><a class="brand" href="/" aria-label="NavorBR — início"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="330" height="66" loading="lazy"></a><p>Soluções SaaS para simplificar a gestão<br>e impulsionar o seu negócio.</p></div>
+      <div class="footer-column" data-reveal><h2>Empresa</h2><a href="#empresa">Sobre a NAVOR BR</a><a href="#sistemas">Nossas soluções</a><a href="#contato">Fale conosco</a></div>
+      <div class="footer-column" data-reveal><h2>Sistemas</h2><div class="footer-products"><div><a href="https://barberhub.navorbr.com">BarberHub</a><span>LawHub <small>Em breve</small></span><span>RepHub <small>Em breve</small></span></div><div><span>EngHub <small>Em breve</small></span><span>PetHub <small>Em breve</small></span><span>LetterHub <small>Em breve</small></span></div></div></div>
+      <div class="footer-column contact" data-reveal><h2>Vamos conversar</h2><a class="contact-email" href="mailto:contato@navorbr.com"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#mail"/></svg>contato@navorbr.com</a><a class="footer-login" href="https://barberhub.navorbr.com/entrar">Já é cliente? Entrar no BarberHub ↗</a></div>
     </div>
+    <div class="wrap footer-bottom"><span>© 2026 NAVOR BR. Todos os direitos reservados.</span><span>Tecnologia para evoluir.</span></div>
   </footer>
-
-  <script>
-    if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-      gsap.from(".hero > *", { y: 30, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out" });
-      gsap.from(".card", { 
-        y: 30, opacity: 0, duration: 0.8, stagger: 0.1, 
-        scrollTrigger: { trigger: ".products", start: "top 80%" } 
-      });
-    }
-  </script>
 </body>
 </html>
