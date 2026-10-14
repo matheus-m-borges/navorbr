@@ -4,8 +4,6 @@
   const controller = new AbortController();
   const { signal } = controller;
   const header = document.querySelector('.site-header');
-  const menu = document.querySelector('#mobile-menu');
-  const toggle = document.querySelector('.menu-toggle');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 901px)');
   const hero = document.querySelector('.hero');
@@ -19,54 +17,11 @@
   let userPaused = false;
   let idleHandle;
   let globeObserver;
-  let previousOverflow = '';
   let pointerFrame = 0;
   let scrollFrame = 0;
   let currentCard;
   let revealObserver;
   let sectionObserver;
-
-  const closeMenu = () => menu.open && menu.close();
-  toggle.addEventListener('click', () => {
-    previousOverflow = document.body.style.overflow;
-    menu.showModal();
-    document.body.style.overflow = 'hidden';
-    toggle.setAttribute('aria-expanded', 'true');
-    menu.querySelector('.menu-close').focus();
-  }, { signal });
-  menu.querySelector('.menu-close').addEventListener('click', closeMenu, { signal });
-  menu.addEventListener('keydown', event => {
-    if (event.key !== 'Tab') return;
-    const focusable = [...menu.querySelectorAll('a[href], button:not([disabled])')];
-    const first = focusable[0];
-    const last = focusable.at(-1);
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  }, { signal });
-  menu.addEventListener('close', () => {
-    document.body.style.overflow = previousOverflow;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.focus({ preventScroll: true });
-  }, { signal });
-  menu.addEventListener('click', event => {
-    if (event.target === menu && event.clientX < menu.getBoundingClientRect().left) closeMenu();
-    const link = event.target.closest('a');
-    if (!link) return;
-    closeMenu();
-    if (link.hash && link.origin === location.origin) {
-      const target = document.querySelector(link.hash);
-      // Wait for the dialog's close event before moving focus to the destination.
-      requestAnimationFrame(() => target?.focus({ preventScroll: true }));
-    }
-  }, { signal });
-  matchMedia('(min-width: 901px)').addEventListener('change', event => {
-    if (event.matches) closeMenu();
-  }, { signal });
 
   const updateScroll = () => {
     scrollFrame = 0;

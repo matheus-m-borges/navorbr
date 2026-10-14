@@ -17,6 +17,8 @@
   <link rel="alternate icon" href="/favicon.ico">
   <link rel="preload" href="/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/access.css">
+  <script src="/navigation.js" defer></script>
   <script src="/main.js" defer></script>
 </head>
 <body>
@@ -28,7 +30,7 @@
         <a href="/" aria-current="location">Início</a><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a>
       </nav>
       <div class="header-actions">
-        <div class="header-core"><a class="button button-outline" href="https://sis.navorbr.com" aria-label="Acessar sistema NAVOR Core — administração">Acessar sistema <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#external"/></svg></a><span>NAVOR Core · Administração</span></div>
+        <!-- system-access:desktop -->
         <a class="button button-primary" href="mailto:contato@navorbr.com">Fale conosco</a>
       </div>
       <nav class="no-js-nav" aria-label="Navegação sem JavaScript"><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a></nav>
@@ -38,7 +40,7 @@
   <dialog class="mobile-menu" id="mobile-menu" aria-label="Menu de navegação">
     <div class="menu-top"><a class="brand" href="/" aria-label="NavorBR — início"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="330" height="66"></a><button class="menu-close" aria-label="Fechar menu" autofocus>×</button></div>
     <nav aria-label="Navegação mobile"><a href="/">Início</a><a href="#empresa">Empresa</a><a href="#sistemas">Sistemas</a><a href="#contato">Contato</a></nav>
-    <div class="mobile-access"><a class="button button-primary" href="https://barberhub.navorbr.com">Conhecer BarberHub <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><a class="button button-outline" href="https://barberhub.navorbr.com/entrar">Entrar no BarberHub</a><small>Área administrativa da NavorBR</small><a href="https://sis.navorbr.com">Acessar NAVOR Core ↗</a></div>
+    <div class="mobile-access"><!-- system-access:mobile --><a class="button button-primary" href="https://barberhub.navorbr.com">Conhecer BarberHub <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a><a class="button button-outline" href="https://barberhub.navorbr.com/entrar">Entrar no BarberHub</a></div>
     <a class="menu-email" href="mailto:contato@navorbr.com">contato@navorbr.com</a>
   </dialog>
   <main id="conteudo" tabindex="-1">

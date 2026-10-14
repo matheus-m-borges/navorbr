@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
+import { renderHome } from './access-components.mjs';
 const root = path.resolve(import.meta.dirname, '..');
-const html = await readFile(path.join(root, 'index.html'), 'utf8');
+const html = renderHome(await readFile(path.join(root, 'index.html'), 'utf8'));
 test('âncoras institucionais têm destinos reais', () => {
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]));
   for (const [,id] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(id), `Âncora ausente: ${id}`);
@@ -35,7 +36,7 @@ test('produtos somente em Nossos Sistemas; futuros sem navegação', () => {
 });
 test('recursos locais referenciados existem', async () => {
   for (const [,url] of html.matchAll(/(?:src|href|srcset)="(\/[^"#]*)(?:#[^"]*)?"/g)) {
-    if (url !== '/') await access(path.join(root, url));
+    if (url !== '/') await access(path.join(root, url === '/acessar' ? '/acessar.html' : url));
   }
 });
 test('página independente de scripts remotos e integrações privadas', async () => {
