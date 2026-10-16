@@ -1,6 +1,6 @@
 // Build-time components: public HTML is complete even without JavaScript.
 export const systems = [
-  { name: 'BarberHub', icon: 'scissors', description: 'Gestão profissional para barbearias.', href: 'https://barberhub.navorbr.com/barber' },
+  { name: 'NavalhaHub', icon: 'scissors', description: 'Gestão profissional para barbearias.', href: 'https://app.navalhahub.navorbr.com/barber/login' },
   { name: 'LawHub', icon: 'scales', description: 'Organização para a sua prática jurídica.' },
   { name: 'RepHub', icon: 'chart', description: 'CRM para representantes comerciais.' },
   { name: 'EngHub', icon: 'helmet', description: 'Gestão para obras e engenharia.' },

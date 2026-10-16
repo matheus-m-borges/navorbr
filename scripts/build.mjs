@@ -2,7 +2,7 @@ import { cp, mkdir, readdir, stat, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path';
 import { renderHome, renderAccess } from './access-components.mjs';
 const root = path.resolve(import.meta.dirname, '..');
-const files = ['styles.css', 'access.css', 'navigation.js', 'access.js', 'main.js', 'globe.js', 'assets', 'favicon.ico', 'favicon.png', 'navorbr-icon.svg', 'navorbr-logo-dark.svg', 'navorbr-logo-light.svg', 'robots.txt'];
+const files = ['styles.css', 'access.css', 'navigation.js', 'access.js', 'main.js', 'globe.js', 'assets', 'favicon.ico', 'favicon.png', 'navorbr-icon.svg', 'navorbr-logo-dark.svg', 'navorbr-logo-light.svg', 'robots.txt', 'navalhahub.html'];
 await mkdir(path.join(root, 'dist'), { recursive: true });
 for (const file of files) await cp(path.join(root, file), path.join(root, 'dist', file), { recursive: true });
 const home = await readFile(path.join(root, 'index.html'), 'utf8');

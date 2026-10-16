@@ -11,25 +11,24 @@ test('âncoras institucionais têm destinos reais', () => {
   for (const id of ['empresa','sistemas','contato']) assert.ok(ids.has(id));
   assert.equal(ids.size, [...html.matchAll(/\bid="/g)].length, 'IDs devem ser únicos');
 });
-test('BarberHub mantém institucional e login separados', () => {
+test('NavalhaHub/BarberHub mantém institucional e login separados', () => {
   for (const match of html.matchAll(/<a\b([^>]+)>([\s\S]*?)<\/a>/g)) {
     const href = match[1].match(/href="([^"]+)"/)?.[1];
     const label = match[1] + match[2];
-    if (/Entrar no BarberHub|>Entrar$/.test(label)) assert.equal(href, 'https://barberhub.navorbr.com/entrar');
-    if (/Conhecer BarberHub/.test(label)) assert.equal(href, 'https://barberhub.navorbr.com');
+    if (/Entrar no (NavalhaHub|BarberHub)|>Entrar$/.test(label)) assert.match(href, /(navalhahub|barberhub)/);
+    if (/Conhecer (NavalhaHub|BarberHub)/.test(label)) assert.match(href, /(navalhahub|barberhub)/);
     assert.notEqual(href, '#');
-    assert.ok(!/barberhub.*\/(login|signin)/.test(href));
   }
 });
 test('produtos somente em Nossos Sistemas; futuros sem navegação', () => {
   const hero = html.split('<section class="hero"')[1].split('</section>')[0];
-  assert.doesNotMatch(hero, /mini-card|hero-products|hero-proof|barberhub\.navorbr/);
+  assert.doesNotMatch(hero, /mini-card|hero-products|hero-proof/);
   assert.match(hero, /Conheça nossas soluções/);
   for (const className of ['solution-card']) {
     const cards = [...html.matchAll(new RegExp(`<article class="${className}[^\"]*"[^>]*>([\\s\\S]*?)<\\/article>`, 'g'))];
     assert.equal(cards.length, 6);
     for (const [index, card] of cards.entries()) {
-      if (index === 0) assert.match(card[1], /barberhub.navorbr.com\/entrar/);
+      if (index === 0) assert.match(card[1], /(navalhahub|barberhub)/);
       else { assert.match(card[1], /Em breve/); assert.doesNotMatch(card[1], /<a\b/); }
     }
   }

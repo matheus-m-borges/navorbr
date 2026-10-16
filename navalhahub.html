@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080A0D">
+<title>NavalhaHub — Gestão Completa para Barbearias</title>
+<meta name="description" content="NavalhaHub: sistema completo de gestão para barbearias modernas. Agenda, fila de espera, PDV, comissões, financeiro e portal do cliente em uma única plataforma premium.">
+<link rel="canonical" href="https://navalhahub.navorbr.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="NavalhaHub — Gestão Completa para Barbearias">
+<meta property="og:description" content="Agenda inteligente, PDV rápido, comissões automáticas e portal do cliente. Eleve o nível da sua barbearia.">
+<meta property="og:url" content="https://navalhahub.navorbr.com/">
+<meta property="og:image" content="https://navalhahub.navorbr.com/assets/navalhahub-logo.png">
+<link rel="icon" href="/assets/navalhahub-logo.png" type="image/png">
+<link rel="preload" href="/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<style>
+  /* NavalhaHub Landing Specifics - Extending NavorBR Design System */
+  .nh-hero { position: relative; isolation: isolate; min-height: 780px; display: flex; align-items: center; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .nh-hero::before { content: ''; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse at 70% 40%, #2d271b 0, transparent 65%), linear-gradient(90deg, #080a0df5 0%, #080a0de5 30%, #080a0d40 60%, transparent 100%); }
+  .nh-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; padding-top: 140px; padding-bottom: 100px; }
+  .nh-logo { height: 64px; width: auto; margin-bottom: 32px; filter: drop-shadow(0 4px 12px rgba(213, 166, 79, 0.15)); }
+  .nh-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 100px; background: rgba(213, 166, 79, 0.08); border: 1px solid rgba(213, 166, 79, 0.25); color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+  .nh-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  .nh-title { font-size: clamp(44px, 5vw, 72px); font-weight: 800; letter-spacing: -0.06em; line-height: 1.05; margin-bottom: 28px; }
+  .nh-title em { font-style: normal; color: var(--gold); background: linear-gradient(135deg, #e9bc69, #f0c979 50%, #d5a64f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .nh-desc { font-size: 17px; line-height: 1.75; color: #c0c0c1; max-width: 520px; margin-bottom: 40px; }
+  .nh-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 80px; }
+  .nh-feat { padding: 28px 24px; background: rgba(20, 24, 32, 0.6); border: 1px solid var(--line); border-radius: 12px; transition: transform 250ms var(--ease), border-color 250ms; }
+  .nh-feat:hover { transform: translateY(-4px); border-color: rgba(213, 166, 79, 0.4); }
+  .nh-feat h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: #fff; }
+  .nh-feat p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
+  .nh-feat-icon { width: 36px; height: 36px; margin-bottom: 16px; color: var(--gold); stroke-width: 1.5; }
+  .nh-mockup { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(213, 166, 79, 0.2); box-shadow: 0 25px 80px -20px rgba(0,0,0,0.7), 0 0 40px rgba(213, 166, 79, 0.05); background: #141820; aspect-ratio: 4/3; }
+  .nh-mockup img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+  .nh-plans { padding: 100px 0; background: #0b0d11; border-block: 1px solid var(--line); }
+  .nh-plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .nh-plan { padding: 40px 32px; border-radius: 16px; border: 1px solid var(--line); background: #141820; display: flex; flex-direction: column; position: relative; }
+  .nh-plan.featured { border-color: var(--gold); background: linear-gradient(180deg, rgba(213, 166, 79, 0.06) 0%, #141820 40%); }
+  .nh-plan-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 12px; }
+  .nh-plan.featured .nh-plan-name { color: var(--gold); }
+  .nh-plan-price { font-size: 42px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 8px; }
+  .nh-plan-price span { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .nh-plan-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 32px; min-height: 44px; }
+  .nh-plan-list { list-style: none; padding: 0; margin: 0 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .nh-plan-list li { font-size: 14px; color: #ddd9d1; display: flex; align-items: flex-start; gap: 10px; }
+  .nh-plan-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+  .nh-cta-final { padding: 120px 0; text-align: center; position: relative; overflow: hidden; }
+  .nh-cta-final::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(213, 166, 79, 0.08) 0%, transparent 70%); pointer-events: none; }
+  @media (max-width: 1000px) {
+    .nh-layout { grid-template-columns: 1fr; gap: 40px; padding-top: 120px; }
+    .nh-mockup { max-width: 600px; margin-inline: auto; }
+    .nh-features { grid-template-columns: 1fr; gap: 16px; margin-top: 48px; }
+    .nh-plan-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="NavorBR — início"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="330" height="66"></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="/">NavorBR</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a class="button button-outline" href="https://app.navalhahub.navorbr.com/barber/login">Entrar</a>
+      <a class="button button-primary" href="#planos">Começar agora</a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+  <!-- HERO -->
+  <section class="nh-hero" aria-labelledby="nh-hero-title">
+    <div class="wrap nh-layout">
+      <div class="nh-copy">
+        <img src="/assets/navalhahub-logo.png" alt="NavalhaHub" class="nh-logo">
+        <div class="nh-badge">Plataforma Premium para Barbearias</div>
+        <h1 id="nh-hero-title" class="nh-title">Gestão que eleva<br>o <em>nível</em> da sua<br>barbearia.</h1>
+        <p class="nh-desc">Agenda inteligente, PDV ultrarrápido, comissões automáticas, fila de espera e portal do cliente. Tudo em uma única plataforma pensada para quem leva a profissão a sério.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#planos">Ver planos e preços <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a>
+          <a class="button button-outline" href="https://app.navalhahub.navorbr.com/barber/login">Acessar demonstração</a>
+        </div>
+      </div>
+      <div class="nh-mockup">
+        <img src="/assets/navalhahub-dashboard.png" alt="Dashboard NavalhaHub" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section class="systems wrap" id="recursos" aria-labelledby="feat-title" style="padding-top:100px;padding-bottom:100px;">
+    <div class="section-heading" data-reveal>
+      <div>
+        <p class="eyebrow">Tudo que você precisa</p>
+        <h2 id="feat-title">Recursos pensados para<br><span>quem não para.</span></h2>
+      </div>
+      <p class="section-intro">Cada funcionalidade foi desenhada ao lado de barbeiros e gestores reais. Sem excesso, sem falta.</p>
+    </div>
+    <div class="nh-features">
+      <div class="nh-feat" data-reveal>
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <h3>Agenda Inteligente</h3>
+        <p>Visualização diária e semanal, bloqueios de horário, confirmação automática e integração com WhatsApp.</p>
+      </div>
+      <div class="nh-feat" data-reveal style="--delay:60ms">
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        <h3>PDV & Caixa Rápido</h3>
+        <p>Abertura e fechamento de caixa, múltiplas formas de pagamento, descontos e sangrias com auditoria completa.</p>
+      </div>
+      <div class="nh-feat" data-reveal style="--delay:120ms">
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <h3>Comissões Automáticas</h3>
+        <p>Regras por profissional, serviço ou produto. Relatórios detalhados de produtividade e repasses.</p>
+      </div>
+      <div class="nh-feat" data-reveal style="--delay:180ms">
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+        <h3>Fila de Espera Digital</h3>
+        <p>Clientes entram na fila pelo celular ou totem. Notificações automáticas quando é a vez deles.</p>
+      </div>
+      <div class="nh-feat" data-reveal style="--delay:240ms">
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        <h3>Estoque & Compras</h3>
+        <p>Controle de insumos, alertas de estoque baixo, registro de entradas e transferências entre unidades.</p>
+      </div>
+      <div class="nh-feat" data-reveal style="--delay:300ms">
+        <svg class="nh-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h3>Portal do Cliente</h3>
+        <p>Seus clientes agendam online, veem histórico, acumulam pontos e recebem promoções personalizadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="nh-plans" id="planos" aria-labelledby="plans-title">
+    <div class="wrap">
+      <div class="section-heading" style="justify-content:center;text-align:center;" data-reveal>
+        <div>
+          <p class="eyebrow">Investimento transparente</p>
+          <h2 id="plans-title">Planos que cabem no<br><span>seu momento.</span></h2>
+        </div>
+      </div>
+      <div class="nh-plan-grid">
+        <div class="nh-plan" data-reveal>
+          <div class="nh-plan-name">Essencial</div>
+          <div class="nh-plan-price">R$ 89<span>/mês</span></div>
+          <p class="nh-plan-desc">Para barbearias individuais ou com até 2 profissionais.</p>
+          <ul class="nh-plan-list">
+            <li>Agenda completa</li>
+            <li>PDV e caixa básico</li>
+            <li>Cadastro de clientes ilimitado</li>
+            <li>Relatórios essenciais</li>
+            <li>Suporte por e-mail</li>
+          </ul>
+          <a class="button button-outline" style="margin-top:32px;width:100%;" href="#contato">Começar teste grátis</a>
+        </div>
+        <div class="nh-plan featured" data-reveal style="--delay:80ms">
+          <div class="nh-plan-name">Profissional</div>
+          <div class="nh-plan-price">R$ 179<span>/mês</span></div>
+          <p class="nh-plan-desc">Para barbearias estabelecidas com equipe de 3 a 8 profissionais.</p>
+          <ul class="nh-plan-list">
+            <li>Tudo do Essencial</li>
+            <li>Comissões automáticas</li>
+            <li>Fila de espera digital</li>
+            <li>Estoque e compras</li>
+            <li>Portal do cliente</li>
+            <li>Financeiro completo (DRE)</li>
+            <li>Suporte prioritário WhatsApp</li>
+          </ul>
+          <a class="button button-primary" style="margin-top:32px;width:100%;" href="#contato">Começar teste grátis</a>
+        </div>
+        <div class="nh-plan" data-reveal style="--delay:160ms">
+          <div class="nh-plan-name">Multi-Unidade</div>
+          <div class="nh-plan-price">R$ 349<span>/mês</span></div>
+          <p class="nh-plan-desc">Para redes e franquias com mais de uma unidade.</p>
+          <ul class="nh-plan-list">
+            <li>Tudo do Profissional</li>
+            <li>Até 10 unidades</li>
+            <li>Transferência de estoque</li>
+            <li>Relatórios consolidados</li>
+            <li>API de integração</li>
+            <li>Gerente de conta dedicado</li>
+            <li>Onboarding personalizado</li>
+          </ul>
+          <a class="button button-outline" style="margin-top:32px;width:100%;" href="#contato">Falar com consultor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="nh-cta-final" id="contato" aria-labelledby="cta-title">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <p class="eyebrow" data-reveal>Pronto para evoluir?</p>
+      <h2 id="cta-title" class="nh-title" style="font-size:clamp(32px,4vw,52px);max-width:700px;margin-inline:auto;" data-reveal>Sua barbearia merece<br>uma gestão de <em>elite.</em></h2>
+      <p class="nh-desc" style="margin-inline:auto;text-align:center;" data-reveal>Comece hoje o teste gratuito de 14 dias. Sem cartão de crédito, sem compromisso.</p>
+      <div class="hero-buttons" style="justify-content:center;" data-reveal>
+        <a class="button button-primary" href="mailto:contato@navorbr.com?subject=Quero%20conhecer%20o%20NavalhaHub">Falar com a equipe <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a>
+        <a class="button button-outline" href="https://app.navalhahub.navorbr.com/barber/login">Acessar plataforma</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/"><img src="/assets/navorbr-gold.svg" alt="NavorBR" width="170" height="34"></a>
+        <p>Tecnologia que impulsiona resultados. Sistemas especializados para simplificar a gestão e acompanhar o crescimento do seu negócio.</p>
+      </div>
+      <div class="footer-column">
+        <h2>NavalhaHub</h2>
+        <a href="#recursos">Recursos</a>
+        <a href="#planos">Planos</a>
+        <a href="https://app.navalhahub.navorbr.com/barber/login">Entrar</a>
+        <a href="https://cliente.navalhahub.navorbr.com">Portal do Cliente</a>
+      </div>
+      <div class="footer-column">
+        <h2>NavorBR</h2>
+        <a href="/">Início</a>
+        <a href="/#empresa">Empresa</a>
+        <a href="/#sistemas">Ecossistema</a>
+        <a href="mailto:contato@navorbr.com">Contato</a>
+      </div>
+      <div class="footer-column contact">
+        <h2>Fale conosco</h2>
+        <a class="contact-email" href="mailto:contato@navorbr.com"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#mail"/></svg> contato@navorbr.com</a>
+        <span style="margin-top:12px;display:block;">São Paulo, Brasil</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 NavorBR Tecnologia Ltda. Todos os direitos reservados.</span>
+      <span>NavalhaHub &bull; NavorBR</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/navigation.js" defer></script>
+<script src="/main.js" defer></script>
+</body>
+</html>

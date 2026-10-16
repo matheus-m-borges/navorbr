@@ -8,3 +8,9 @@ artifacts/
 *.key
 *.bak
 *.tmp
+.playwright-mcp/
+barberhub-localhost-3001.png
+operacao-final/
+operacao-final-evidencias/
+tmp-pw-*.cjs
+

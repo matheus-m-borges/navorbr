@@ -12,7 +12,7 @@ http.createServer(async (req,res) => {
     const publicPath = pathname === '/' ? '/index.html' : /^\/acessar\/?$/.test(pathname) ? '/acessar.html' : pathname;
     const target = path.resolve(root, '.' + publicPath);
     const relative = path.relative(root, target);
-    const allowed = ['index.html','acessar.html','styles.css','access.css','navigation.js','access.js','main.js','globe.js','robots.txt'].includes(relative) || /^(favicon|navorbr-)/.test(relative) || relative.startsWith('assets' + path.sep);
+    const allowed = ['index.html','acessar.html','navalhahub.html','styles.css','access.css','navigation.js','access.js','main.js','globe.js','robots.txt'].includes(relative) || /^(favicon|navorbr-)/.test(relative) || relative.startsWith('assets' + path.sep);
     if (!allowed || relative.startsWith('..') || !(await stat(target)).isFile()) {
       res.writeHead(404); res.end('Not found'); return;
     }
